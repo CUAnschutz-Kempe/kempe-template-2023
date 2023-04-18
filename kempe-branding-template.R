@@ -76,9 +76,6 @@ scale_color_gradient2_kempe <- function(...) {ggplot2::scale_color_gradient2(...
 
 # theme -------------------------------------------------------------------
 
-# this argument ovderwrite isn't working
-# facet_grid <- function() {ggplot2::facet_grid(switch = "y")}
-
 # set default text as Roboto and title text as Montserrat
 # other defaults come from theme_bw
 theme_kempe <- function() {
@@ -87,26 +84,9 @@ theme_kempe <- function() {
     ggplot2::theme(
       
       # set text elements
-      text        = ggplot2::element_text(family = "Roboto"     , size = ggplot2::rel(1), face = "plain" , margin = ggplot2::margin(t=8,r=8,b=8,l=8, unit="pt")),
-      title       = ggplot2::element_text(family = "Montserrat" , size = ggplot2::rel(1.25), face = "bold"  ),# , margin = ggplot2::margin(t=8,b=8                   )),
-      strip.text  = ggplot2::element_text(                        size = ggplot2::rel(1.1),                   margin = ggplot2::margin(t=12,b=12                  )),
-      axis.text.y = ggplot2::element_text(                                                    margin = ggplot2::margin(r=0,b=0, unit="pt")),
-      axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t=0,b=0)),
-      # # set rectangular elements
-      # panel.border     = ggplot2::element_rect(fill = NA       , color = "grey20" ),
-      # strip.background = ggplot2::element_rect(fill = "grey85" , color = "grey20" ),
-      # panel.background = ggplot2::element_rect(fill = "white"  , color = NA       ),
-      # legend.key       = ggplot2::element_rect(fill = "white"  , color = NA       ),
-      
-      # set panel elements
-      # plot.margin      = ggplot2::margin(t=16,r=16,b=16,l=16, unit="pt"),
-
-      panel.spacing    = ggplot2::unit(0, "points"), # 4
-      # panel.spacing.x = grid::unit(0, "points"),
-      # panel.spacing.y = grid::unit(0, "points"),
-      
-      # panel.grid       = ggplot2::element_line(color = "grey92"              ), 
-      # panel.grid.minor = ggplot2::element_line(linewidth = ggplot2::rel(0.5) ),
+      text        = ggplot2::element_text(family = "Roboto"     , size = ggplot2::rel(1),    face = "plain"),
+      title       = ggplot2::element_text(family = "Montserrat" , size = ggplot2::rel(1.25), face = "bold"),
+      strip.text  = ggplot2::element_text(                        size = ggplot2::rel(1.1)),
       complete = TRUE
     )
   )
